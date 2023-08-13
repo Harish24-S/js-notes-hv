@@ -9,7 +9,8 @@
 // firstName = "Mohit";
 // console.log(firstName);
 
-//String Methods
+
+// 📚📍  String Methods
 
 // trim(), toUpperCase(), toLowerCase(), slice()
 // let name = "Harish"
@@ -60,7 +61,7 @@
 // console.log(fruits.pop())
 // console.log(fruits)
 
-// primitive type
+// 📚📍 primitive type
 // let num1 = 6
 // let num2 = num1
 // console.log("the value of num1 is", num1)
@@ -69,7 +70,7 @@
 // console.log("the value of num1 is", num1)
 // console.log("the value of num2 is", num2)
 
-// reference type
+// 📚📍 reference type
 // let array1 = ["item1", "item2"]
 // let array2 = array1
 // console.log("array1", array1)
@@ -78,7 +79,7 @@
 // console.log("array1", array1)
 // console.log("array2", array2)
 
-// cloning array - 4types
+// 📚📍 cloning array - 4types
 // let array1 = ["item1", "item2"]
 // let array2 = ["item1", "item2"]
 // let array2 = array1.slice(0)
@@ -92,13 +93,12 @@
 
 
 
-
-// for of loop
+// 📚📍 for of loop
 // const fruits = ["apple", "mango", "grapes"]
 // for(let fruit of fruits){
 //     console.log(fruit.toUpperCase())
 // }
-// for in loop
+// 📚📍 for in loop
 // for(let fruit in fruits){
 //     console.log(fruits[fruit].toUpperCase())
 // }
@@ -106,7 +106,7 @@
 
 
 
-// array destruturing
+// 📚📍 array destruturing
 // const array = ["value1", "value2"]
 // storing array values in some variables
 // usual method
@@ -125,7 +125,7 @@
 
 
 
-//OBJECTS
+// 📚📍📚📍 OBJECTS
 
 // const person = {
 //     name: "Harish",
@@ -137,7 +137,7 @@
 //  person.gender = "male"
 //  console.log(person.gender)
 
-// dot vs bracket notation
+// 📚📍 dot vs bracket notation
 // console.log(person["name"])
 // console.log(person["age"])
 // person["gender"] = "male"
@@ -156,7 +156,7 @@
 // console.log(person["person city"])
 
 
-// Iterating through object
+// 📚📍 Iterating through object
 // for in loop
 // for(let key in person){
 //     // console.log(`${key}: ${person[key]}`)
@@ -189,7 +189,7 @@
 // }
 // console.log(obj)
 
-// spread operator in objects
+// 📚📍 spread operator in objects
 // const obj1 = {
 //     key1: "value1",
 //     key2: "value2"
@@ -210,7 +210,7 @@
 // const newObj = {..."abc"}
 // console.log(newObj)
 
-// Object destructuring
+// 📚📍 Object destructuring
 const band = {
     bandName: "led zeppelin",
     famousSong: "Stairway to heaven",
@@ -231,7 +231,7 @@ const band = {
 // let {bandName, famousSong, ...restProps} = band
 // console.log(restProps)
 
-// Objects inside Array  **IMP
+// 📚📍📚📍 Objects inside Array  **IMP
 const users = [
     {userId: 1, firstName: "Harish", gender: "male"},
     {userId: 2, firstName: "Rakesh", gender: "female"},
@@ -243,7 +243,7 @@ const users = [
 //     console.log(user.firstName)
 // }
  
-// Nested destructuring
+// 📚📍 Nested destructuring
 // const [user1, user2, user3] = users
 // console.log(user1)
 

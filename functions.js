@@ -37,6 +37,7 @@
 // console.log(findTarget(arr, 9))
 
 
+// 📚📍
 // ARROW FUNCTIONS 
 // const singHappyBirthday = () => {
 //     console.log('Happy birthday')
@@ -65,6 +66,8 @@
 // let arr = [1,2,3,4,5,6,7]
 // console.log(findTarget(arr, 9))
 
+
+// 📚📍
 // hoisting - only works when function is created using function declaration
 // hello()
 // function hello(){ console.log("hello") }
@@ -77,6 +80,7 @@
 // const hello = "hello world"  --> error
 
 
+// 📚📍
 // functions inside function
 // function app(){
 //     const myFunc = () => console.log("hello from myFunc")
@@ -90,4 +94,63 @@
 // app()
 
 
+// 📚📍
 // lexical scope
+// function myApp(){
+//     const myVar = "value1"
+//     function myFunc(){
+//         const myVar = "value59"
+//         console.log("inside myFunc", myVar)  --> checks for value inside that function, if not available then checks in the parent function(lexical environment) and so on..
+//     }
+//     console.log(myVar)
+//     myFunc()
+// }
+// myApp()
+
+// const myVar = "value1"
+// function myApp(){
+//     function myFunc(){
+//         function myFunc2(){
+//             console.log("inside myFunc2", myVar)  //--> since here myVar is not present in myFunc2 so it checks in the lexical environment
+//         }
+//         myFunc2()
+//     }
+//     console.log(myVar)
+//     myFunc()
+// }
+// myApp()
+
+
+// 📚📍
+// block scope vs function scope
+// let and const are block scope
+// var is function scope
+
+// {
+//     let fName = "Harish"   //--> this is in block scope - block scope variables cannot be accessed outside the block
+//     console.log(fName)
+// }
+// {
+//     const lName = "Sarika"  //--> this is also in block scope 
+//     console.log(lName)
+// }
+
+// now working with var
+// {
+//     var fName = "Akash"
+// }
+// console.log(fName)
+
+// {
+//     var fName = "Harish"
+// }
+// console.log(fName)
+
+function myApp(){
+    if(true){
+        var fName = "Harish"  //--> if we use var it can be accessed anywhere but if we use let/const the log outside the 
+        console.log(fName)          //    if block will give error as it is trying to access variable which is out of its scope
+    }
+    console.log(fName)
+}
+myApp()
