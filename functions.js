@@ -146,11 +146,80 @@
 // }
 // console.log(fName)
 
-function myApp(){
-    if(true){
-        var fName = "Harish"  //--> if we use var it can be accessed anywhere but if we use let/const the log outside the 
-        console.log(fName)          //    if block will give error as it is trying to access variable which is out of its scope
+// function myApp(){
+//     if(true){
+//         var fName = "Harish"  //--> if we use var it can be accessed anywhere but if we use let/const the log outside the 
+//         console.log(fName)          //    if block will give error as it is trying to access variable which is out of its scope
+//     }
+//     console.log(fName)
+// }
+// myApp()
+
+
+// 📚📍 default parameters
+// function addTwo(a, b){
+//     if(typeof b === "undefined"){ b = 0 }     // -> before default parameters were introduced in js the undefined problem was handled in this way
+//     return a + b
+// }
+// const ans = addTwo(4)
+// console.log(ans)
+
+// function addTwo(a, b=0){      // -> now using default parameters b can be set to 0 if no no value for b is passed in the argument
+//     return a + b
+// }
+// const ans = addTwo(4)
+// console.log(ans)
+
+
+// 📚📍 rest parameters
+// function myFunc(a,b, ...c){     // using rest parameter c
+//     console.log(`a is ${a}`)
+//     console.log(`b is ${b}`)
+//     console.log(`c is`, c)
+// }
+// myFunc(1,2,3,4,5,6,7,8)     //-> a,b goes into the a & b parameter and rest of the arguments go into the c as an array
+
+// function addAll(...numbers){
+//     let sum = 0
+//     for (const number of numbers) { sum = sum + number }
+//     console.log(sum)
+// }
+// addAll(1,2,3,4,5,6,7,8,9,10)
+
+
+// 📚📍 param destructuring
+// const person = {
+//     firstName: "Harish",
+//     gender: "male"
+// }
+// function printDetails({firstName, gender}){         //--> here we can use object destructuring in the parameter to access the objects inside it so it is param destructuring
+//     console.log(firstName)
+//     console.log(gender)
+// }
+// printDetails(person)
+
+
+// 📚📍 callback functions (intro)
+// function myFunc(name){
+//     console.log("inside myFunc")
+//     console.log(`your name is ${name}`)
+// }
+// function myFunc2(callback){
+//     // console.log(callback)
+//     console.log("I am a function")
+//     callback("harish")
+// }
+// myFunc2(myFunc)
+
+
+// 📚📍 functions returning functions
+function myFunc(){
+    function myFunc1(){
+        console.log("Harish")
     }
-    console.log(fName)
+    return myFunc1
 }
-myApp()
+
+const ans = myFunc()
+console.log(ans)
+ans()
