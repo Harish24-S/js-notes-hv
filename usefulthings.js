@@ -99,16 +99,28 @@
 
 // 📚📍 clone using Object.assign
 // here obj and obj 2 points to the same memory
-const obj = {
-    key1: "value1",
-    key2: "value2"
-}
-// const obj2 = obj    // clone but if obj is changed then obj2 will also change
-// const obj2 = {...obj}   // cloning using spread operator
-const obj2 = Object.assign({}, obj)     // cloning using Object.assign
-obj.key3 = "value3"
-console.log(obj)
-console.log(obj2)
+// const obj = {
+//     key1: "value1",
+//     key2: "value2"
+// }
+// // const obj2 = obj    // clone but if obj is changed then obj2 will also change
+// // const obj2 = {...obj}   // cloning using spread operator
+// const obj2 = Object.assign({}, obj)     // cloning using Object.assign
+// obj.key3 = "value3"
+// console.log(obj)
+// console.log(obj2)
 
 
-// optional chaining
+// 📚📍 optional chaining
+// const user = {
+//     firstname: "harish",
+//     address: {housenumber: 24}
+// }
+// console.log(user.firstname)
+// console.log(user.address.housenumber)   // it returns the value 24 as expected
+
+// same using the ?. --> this checks if the before ? if defined or not and then returns based on that - which is helpful for not getting any error if something id not defined and cannit be read
+let user;
+console.log(user?.firstname)    // here user is undefined
+console.log(user?.address?.housenumber)     // user is undefined
+
